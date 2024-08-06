@@ -4,7 +4,7 @@ import com.nimbusds.jose.JWSSigner
 import com.nimbusds.jose.crypto.ECDSASigner
 import com.nimbusds.jwt.JWTClaimsSet
 import com.nimbusds.jwt.SignedJWT
-import example.com.plugins.JWTTokenService
+import example.com.jwt.JWTTokenService
 import example.com.plugins.JWTTokenState
 import org.bouncycastle.asn1.pkcs.PrivateKeyInfo
 import org.bouncycastle.openssl.PEMKeyPair
@@ -51,12 +51,12 @@ class JWTTokenServiceTest {
 
 
     @Test
-     fun `test token generates expecting VALID`() {
+    fun `test token generates expecting VALID`() {
         val tokenState = jwtTokenService.verifyJwt(jwtTokenService.generateToken())
         assert(tokenState == JWTTokenState.VALID) {
             "Token state was not VALID was: $tokenState"
         }
-     }
+    }
 
     @Test
     fun `test token verify with expired token expecting EXPIRED`() {

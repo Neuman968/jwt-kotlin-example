@@ -1,14 +1,20 @@
 # Generating keypair
 
 
-## Generating Private Key
+## Generating Private Key and Running
 
-Required step to generate an initial keypair for use in this project. Example command Using openssl.
+**Required** Generate an initial keypair for use in this project. Example command Using openssl.
 
 Note: Replace prime256v1 with whatever elliptic curve algo you want. 
 
 ```bash
 openssl ecparam -name prime256v1 -genkey -noout -out testkey.key
+```
+
+Once the key has been generated, the application can be run using the command
+
+```bash
+./gradlew run
 ```
 
 ## Extracting Pub Key (Optional)
@@ -18,7 +24,6 @@ Extract the public key for use elsewhere.
 ```bash
 openssl ec -in testkey.key -pubout -out testkey.pub
 ```
-
 
 ## Using the API
 
