@@ -28,7 +28,7 @@ dependencies {
     implementation("io.ktor:ktor-server-config-yaml")
     implementation("com.google.zxing:core:3.5.3")
     implementation("com.google.zxing:javase:3.5.3")
-    implementation("com.nimbusds:nimbus-jose-jwt:9.41.1")
+    implementation("com.nimbusds:nimbus-jose-jwt:9.45")
     implementation("org.bouncycastle:bcpkix-jdk15on:1.70")
 
     testImplementation("io.ktor:ktor-server-test-host-jvm")
